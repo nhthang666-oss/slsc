@@ -1,179 +1,283 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Home / 首頁 - Saigon Supply Chain</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* Hiệu ứng load mượt */
-    body {
-      opacity: 0;
-      transition: opacity 0.6s ease-in-out;
-    }
-    body.loaded {
-      opacity: 1;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .section img {
-      display: block;
-      margin: 16px auto;
-      max-height: 300px;
-      object-fit: cover;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home / 首頁 - Saigon Supply Chain</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Hiệu ứng load mượt */
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+body.loaded {
+  opacity: 1;
+}
+
+/* Giới hạn ảnh vừa khung */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+</style>
 </head>
 <body>
-  <header class="header">
-    <div class="brand">
-      <img src="assets/img/logo.png" alt="logo">
-      <div><strong data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</strong></div>
-    </div>
-    <div class="lang">
-      <button id="to-en" class="lang-btn">🇬🇧</button>
-      <button id="to-zh" class="lang-btn">🇨🇳</button>
-    </div>
-  </header>
+<header class="header">
+  <div class="brand">
+    <img src="assets/img/logo.png" alt="logo">
+    <div><strong data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</strong></div>
+  </div>
+  <div class="lang">
+    <button id="to-en" class="lang-btn">🇬🇧</button>
+    <button id="to-zh" class="lang-btn">🇨🇳</button>
+  </div>
+</header>
 
-  <nav class="nav">
-    <a href="#" data-i18n="home">Home</a>
-    <a href="#about" data-i18n="about">About Us</a>
-    <a href="#services" data-i18n="services">Services</a>
-    <a href="#offices" data-i18n="offices">Offices</a>
-    <a href="#contact" data-i18n="contact">Contact</a>
-  </nav>
+<nav class="nav">
+  <a href="#home" data-i18n="home">Home</a>
+  <a href="#about" data-i18n="about">About Us</a>
+  <a href="#services" data-i18n="services">Services</a>
+  <a href="#offices" data-i18n="offices">Offices</a>
+  <a href="#contact" data-i18n="contact">Contact</a>
+</nav>
 
-  <section class="hero">
-    <div class="container">
-      <h1 data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</h1>
-      <p style="font-size:20px;margin-top:12px" data-i18n="tagline">Connecting the World Through Logistics Excellence</p>
-      <a class="btn" href="#contact" data-i18n="contact">Contact</a>
+<section class="hero" id="home">
+  <div class="container">
+    <h1 data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</h1>
+    <p style="font-size:20px;margin-top:12px" data-i18n="tagline">Connecting the World Through Logistics Excellence</p>
+    <a class="btn" href="#contact" data-i18n="contact">Contact</a>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- === About Us === -->
+  <section class="section" id="about">
+    <h2 data-i18n="about">About Us</h2>
+    <p data-i18n="about_text">We are a leading logistics company in Vietnam, offering global supply chain solutions that combine efficiency, reliability, and innovation. Our team brings years of experience in freight forwarding, customs clearance, warehousing, and project cargo handling.</p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="assets/img/about1.jpg" alt="Our Team">
+        <h3 data-i18n="about1_title">Professional Team</h3>
+        <p data-i18n="about1_text">Our staff are trained to deliver fast and accurate logistics solutions with personal attention.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/about2.jpg" alt="Technology">
+        <h3 data-i18n="about2_title">Smart Technology</h3>
+        <p data-i18n="about2_text">We apply modern IT systems and cargo tracking tools to ensure real-time visibility for clients.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/about3.jpg" alt="Network">
+        <h3 data-i18n="about3_title">Global Network</h3>
+        <p data-i18n="about3_text">Strategic partnerships across Asia and the world help us move your cargo safely and efficiently.</p>
+      </div>
     </div>
   </section>
 
-  <main class="container">
-    <section id="about" class="section">
-      <h2 data-i18n="about">About Us</h2>
-      <p data-i18n="about_text">
-        Saigon Supply Chain Logistics Co., Ltd. is a professional logistics service provider, offering integrated solutions for international freight forwarding, warehousing, and supply chain management.
-      </p>
-      <img src="assets/img/about.jpg" alt="About Saigon Supply Chain">
-    </section>
-
-    <section id="services" class="section">
-      <h2 data-i18n="services">Services</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3 data-i18n="service1">Air Freight</h3>
-          <p data-i18n="service1_text">Fast, secure, and efficient international air cargo handling.</p>
-          <img src="assets/img/service-air.jpg" alt="Air Freight">
-        </div>
-        <div class="card">
-          <h3 data-i18n="service2">Sea Freight</h3>
-          <p data-i18n="service2_text">Comprehensive ocean freight solutions for global routes.</p>
-          <img src="assets/img/service-sea.jpg" alt="Sea Freight">
-        </div>
-        <div class="card">
-          <h3 data-i18n="service3">Warehousing</h3>
-          <p data-i18n="service3_text">Safe, modern storage with real-time inventory tracking.</p>
-          <img src="assets/img/service-warehouse.jpg" alt="Warehousing">
-        </div>
+  <!-- === Services === -->
+  <section class="section" id="services">
+    <h2 data-i18n="services">Our Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="assets/img/sea-freight.jpg" alt="Sea Freight">
+        <h3 data-i18n="svc1_title">Sea Freight</h3>
+        <p data-i18n="svc1_text">Full & Less Container Load services, project cargo, and regular consolidation for both import and export.</p>
       </div>
-    </section>
-
-    <section id="offices" class="section">
-      <h2 data-i18n="offices">Our Offices</h2>
-      <p data-i18n="offices_text">We have offices and partners across major cities in Vietnam, China, and Southeast Asia.</p>
-      <img src="assets/img/offices.jpg" alt="Offices">
-    </section>
-
-    <section id="contact" class="section">
-      <h2 data-i18n="contact">Contact Us</h2>
-      <p data-i18n="address">123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam</p>
-      <p data-i18n="phone">+84 38 279 8634</p>
-      <p data-i18n="email">hiring.slschcm@gmail.com</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p data-i18n="address">123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam</p>
-      <p data-i18n="phone">+84 38 279 8634</p>
-      <p data-i18n="email">hiring.slschcm@gmail.com</p>
-      <p style="margin-top:12px" data-i18n="copyright">© 2025 Saigon Supply Chain Logistics Co., Ltd. All Rights Reserved.</p>
+      <div class="card">
+        <img src="assets/img/air-freight.jpg" alt="Air Freight">
+        <h3 data-i18n="svc2_title">Air Freight</h3>
+        <p data-i18n="svc2_text">Fast and reliable air freight solutions with global carriers and door-to-door delivery.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/customs.jpg" alt="Customs">
+        <h3 data-i18n="svc3_title">Customs Brokerage</h3>
+        <p data-i18n="svc3_text">Professional customs clearance, documentation, and compliance support across all ports.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/warehouse.jpg" alt="Warehouse">
+        <h3 data-i18n="svc4_title">Warehousing</h3>
+        <p data-i18n="svc4_text">Flexible warehouse space with value-added services such as labelling, packing, and cross-docking.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/trucking.jpg" alt="Trucking">
+        <h3 data-i18n="svc5_title">Domestic Transport</h3>
+        <p data-i18n="svc5_text">Nationwide trucking service with GPS monitoring and efficient route planning.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/project.jpg" alt="Project Cargo">
+        <h3 data-i18n="svc6_title">Project Cargo</h3>
+        <p data-i18n="svc6_text">Handling heavy lift, out-of-gauge, and industrial project cargo with precision and safety.</p>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Hiệu ứng load mượt
-    window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
-    });
+  <!-- === Offices === -->
+  <section class="section" id="offices">
+    <h2 data-i18n="offices">Our Offices</h2>
+    <p data-i18n="offices_text">We are headquartered in Ho Chi Minh City with offices and partners throughout Vietnam and Asia.</p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="assets/img/hcm.jpg" alt="HCM Office">
+        <h3 data-i18n="off1_title">Ho Chi Minh City (HQ)</h3>
+        <p data-i18n="off1_text">Head office and main logistics hub for Southern Vietnam.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/hanoi.jpg" alt="Hanoi Office">
+        <h3 data-i18n="off2_title">Hanoi Office</h3>
+        <p data-i18n="off2_text">Handling northern operations, customs, and client services.</p>
+      </div>
+      <div class="card">
+        <img src="assets/img/haiphong.jpg" alt="Hai Phong">
+        <h3 data-i18n="off3_title">Hai Phong Port</h3>
+        <p data-i18n="off3_text">Strategic location for sea freight and export-import services in the North.</p>
+      </div>
+    </div>
+  </section>
 
-    // Ngôn ngữ song ngữ (EN / 繁體中文)
-    const translations = {
-      en: {
-        company: "Saigon Supply Chain Logistics Co., Ltd.",
-        home: "Home",
-        about: "About Us",
-        services: "Services",
-        offices: "Offices",
-        contact: "Contact",
-        tagline: "Connecting the World Through Logistics Excellence",
-        about_text: "Saigon Supply Chain Logistics Co., Ltd. is a professional logistics service provider, offering integrated solutions for international freight forwarding, warehousing, and supply chain management.",
-        service1: "Air Freight",
-        service1_text: "Fast, secure, and efficient international air cargo handling.",
-        service2: "Sea Freight",
-        service2_text: "Comprehensive ocean freight solutions for global routes.",
-        service3: "Warehousing",
-        service3_text: "Safe, modern storage with real-time inventory tracking.",
-        offices_text: "We have offices and partners across major cities in Vietnam, China, and Southeast Asia.",
-        address: "123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam",
-        phone: "+84 38 279 8634",
-        email: "hiring.slschcm@gmail.com",
-        copyright: "© 2025 Saigon Supply Chain Logistics Co., Ltd. All Rights Reserved."
-      },
-      zh: {
-        company: "西貢供應鏈物流有限公司",
-        home: "首頁",
-        about: "關於我們",
-        services: "服務項目",
-        offices: "辦事處",
-        contact: "聯絡我們",
-        tagline: "以卓越物流連接世界",
-        about_text: "西貢供應鏈物流有限公司是一家專業的物流服務供應商，提供國際貨運代理、倉儲及供應鏈管理的一體化解決方案。",
-        service1: "空運服務",
-        service1_text: "快速、安全且高效的國際航空貨運服務。",
-        service2: "海運服務",
-        service2_text: "覆蓋全球航線的全方位海運解決方案。",
-        service3: "倉儲服務",
-        service3_text: "安全、現代化的倉庫，提供即時庫存追蹤。",
-        offices_text: "我們在越南、中國及東南亞主要城市設有辦事處與合作夥伴。",
-        address: "越南胡志明市第七郡阮文靈街123號",
-        phone: "+84 38 279 8634",
-        email: "hiring.slschcm@gmail.com",
-        copyright: "© 2025 西貢供應鏈物流有限公司 版權所有"
-      }
-    };
+  <!-- === Contact === -->
+  <section class="section" id="contact">
+    <h2 data-i18n="contact">Contact Us</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="ct1_title">General Enquiries</h3>
+        <p><strong>Email:</strong> <span data-i18n="email">hiring.slschcm@gmail.com</span><br><strong>Phone:</strong> <span data-i18n="phone">+84 38 279 8634</span></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="ct2_title">Sales Department</h3>
+        <p><strong>Email:</strong> hiring.slschcm@gmail.com<br><strong>Phone:</strong> +84 38 279 8634</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="ct3_title">Operations Support</h3>
+        <p><strong>Email:</strong> hiring.slschcm@gmail.com<br><strong>Phone:</strong> +84 38 279 8634</p>
+      </div>
+    </div>
+    <p style="margin-top:18px;" data-i18n="ct_note">We look forward to working with you!</p>
+  </section>
+</main>
 
-    let currentLang = "en";
-    const switchLang = (lang) => {
-      const items = document.querySelectorAll("[data-i18n]");
-      items.forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-      currentLang = lang;
-    };
+<footer class="footer">
+  <div class="container">
+    <p data-i18n="address">123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam</p>
+    <p><span data-i18n="phone">+84 38 279 8634</span> | <span data-i18n="email">hiring.slschcm@gmail.com</span></p>
+    <p style="margin-top:12px" data-i18n="copyright">© 2025 Saigon Supply Chain Logistics Co., Ltd. All Rights Reserved.</p>
+  </div>
+</footer>
 
-    document.getElementById("to-en").addEventListener("click", () => switchLang("en"));
-    document.getElementById("to-zh").addEventListener("click", () => switchLang("zh"));
-  </script>
+<script>
+/* Hiệu ứng load mượt */
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+/* Ngôn ngữ song ngữ Anh - Trung (Phồn thể) */
+const translations = {
+  en: {
+    home: "Home",
+    about: "About Us",
+    services: "Services",
+    offices: "Offices",
+    contact: "Contact",
+    company: "Saigon Supply Chain Logistics Co., Ltd.",
+    tagline: "Connecting the World Through Logistics Excellence",
+    about_text: "We are a leading logistics company in Vietnam, offering global supply chain solutions that combine efficiency, reliability, and innovation. Our team brings years of experience in freight forwarding, customs clearance, warehousing, and project cargo handling.",
+    about1_title: "Professional Team",
+    about1_text: "Our staff are trained to deliver fast and accurate logistics solutions with personal attention.",
+    about2_title: "Smart Technology",
+    about2_text: "We apply modern IT systems and cargo tracking tools to ensure real-time visibility for clients.",
+    about3_title: "Global Network",
+    about3_text: "Strategic partnerships across Asia and the world help us move your cargo safely and efficiently.",
+    svc1_title: "Sea Freight",
+    svc1_text: "Full & Less Container Load services, project cargo, and regular consolidation for both import and export.",
+    svc2_title: "Air Freight",
+    svc2_text: "Fast and reliable air freight solutions with global carriers and door-to-door delivery.",
+    svc3_title: "Customs Brokerage",
+    svc3_text: "Professional customs clearance, documentation, and compliance support across all ports.",
+    svc4_title: "Warehousing",
+    svc4_text: "Flexible warehouse space with value-added services such as labelling, packing, and cross-docking.",
+    svc5_title: "Domestic Transport",
+    svc5_text: "Nationwide trucking service with GPS monitoring and efficient route planning.",
+    svc6_title: "Project Cargo",
+    svc6_text: "Handling heavy lift, out-of-gauge, and industrial project cargo with precision and safety.",
+    offices_text: "We are headquartered in Ho Chi Minh City with offices and partners throughout Vietnam and Asia.",
+    off1_title: "Ho Chi Minh City (HQ)",
+    off1_text: "Head office and main logistics hub for Southern Vietnam.",
+    off2_title: "Hanoi Office",
+    off2_text: "Handling northern operations, customs, and client services.",
+    off3_title: "Hai Phong Port",
+    off3_text: "Strategic location for sea freight and export-import services in the North.",
+    ct1_title: "General Enquiries",
+    ct2_title: "Sales Department",
+    ct3_title: "Operations Support",
+    ct_note: "We look forward to working with you!",
+    address: "123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam",
+    phone: "+84 38 279 8634",
+    email: "hiring.slschcm@gmail.com",
+    copyright: "© 2025 Saigon Supply Chain Logistics Co., Ltd. All Rights Reserved."
+  },
+  zh: {
+    home: "首頁",
+    about: "關於我們",
+    services: "服務項目",
+    offices: "辦事處",
+    contact: "聯絡我們",
+    company: "西貢供應鏈物流有限公司",
+    tagline: "以卓越的物流連接世界",
+    about_text: "我們是越南領先的物流公司，提供高效、可靠、創新的全球供應鏈解決方案。團隊擁有豐富的報關、倉儲與專案貨物處理經驗。",
+    about1_title: "專業團隊",
+    about1_text: "我們的員工以專業與細心提供快速且準確的物流解決方案。",
+    about2_title: "智慧科技",
+    about2_text: "採用現代資訊系統與貨物追蹤技術，確保即時可視化與高透明度。",
+    about3_title: "全球網絡",
+    about3_text: "在亞洲及全球的合作夥伴，確保貨物安全、高效地運輸。",
+    svc1_title: "海運服務",
+    svc1_text: "提供整櫃及拼櫃、專案貨與定期集運的進出口服務。",
+    svc2_title: "空運服務",
+    svc2_text: "與全球航空公司合作，快速可靠的空運門到門解決方案。",
+    svc3_title: "報關服務",
+    svc3_text: "專業處理清關、文件及各港口合規服務。",
+    svc4_title: "倉儲服務",
+    svc4_text: "提供靈活倉儲空間與增值服務，如貼標、包裝與轉運。",
+    svc5_title: "國內運輸",
+    svc5_text: "全國卡車運輸服務，GPS監控與高效路線規劃。",
+    svc6_title: "專案貨物",
+    svc6_text: "處理大型、超規及工業貨物，確保精確與安全。",
+    offices_text: "總部位於胡志明市，在越南及亞洲設有辦事處與合作夥伴。",
+    off1_title: "胡志明市（總部）",
+    off1_text: "越南南部主要的物流樞紐與營運中心。",
+    off2_title: "河內辦事處",
+    off2_text: "負責北部地區業務、報關與客戶支援。",
+    off3_title: "海防港",
+    off3_text: "北越重要的海運及進出口服務據點。",
+    ct1_title: "一般諮詢",
+    ct2_title: "業務部門",
+    ct3_title: "操作支援",
+    ct_note: "期待與您合作！",
+    address: "越南胡志明市第七郡阮文靈街123號",
+    phone: "+84 38 279 8634",
+    email: "hiring.slschcm@gmail.com",
+    copyright: "© 2025 西貢供應鏈物流有限公司 版權所有"
+  }
+};
+
+/* Xử lý chuyển ngôn ngữ */
+function switchLang(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  localStorage.setItem("lang", lang);
+}
+
+/* Gán sự kiện nút bấm */
+document.getElementById("to-en").addEventListener("click", () => switchLang("en"));
+document.getElementById("to-zh").addEventListener("click", () => switchLang("zh"));
+
+/* Giữ ngôn ngữ đã chọn khi reload */
+const savedLang = localStorage.getItem("lang") || "en";
+switchLang(savedLang);
+</script>
 </body>
 </html>
