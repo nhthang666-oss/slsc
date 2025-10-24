@@ -5,46 +5,27 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Home / 首頁 - Saigon Supply Chain</title>
 <link rel="stylesheet" href="assets/css/style.css">
-
 <style>
-  /* Hiệu ứng mượt khi load trang */
-  body {
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
-  }
-  body.loaded {
-    opacity: 1;
-  }
+/* Hiệu ứng load mượt */
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+body.loaded {
+  opacity: 1;
+}
 
-  /* Hiệu ứng fade-in khi cuộn */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s ease, transform 1.2s ease;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Căn ảnh vừa khung card, đồng bộ toàn web */
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
-
-  /* Mượt khi cuộn trang */
-  html {
-    scroll-behavior: smooth;
-  }
+/* Giới hạn ảnh vừa khung */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 </style>
 </head>
-
 <body>
-<header class="header fade-in">
+<header class="header">
   <div class="brand">
     <img src="assets/img/logo.png" alt="logo">
     <div><strong data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</strong></div>
@@ -55,7 +36,7 @@
   </div>
 </header>
 
-<nav class="nav fade-in">
+<nav class="nav">
   <a href="#home" data-i18n="home">Home</a>
   <a href="#about" data-i18n="about">About Us</a>
   <a href="#services" data-i18n="services">Services</a>
@@ -63,10 +44,10 @@
   <a href="#contact" data-i18n="contact">Contact</a>
 </nav>
 
-<section class="hero fade-in" id="home">
+<section class="hero" id="home">
   <div class="container">
     <h1 data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</h1>
-    <p data-i18n="tagline" style="font-size:20px;margin-top:12px">Connecting the World Through Logistics Excellence</p>
+    <p style="font-size:20px;margin-top:12px" data-i18n="tagline">Connecting the World Through Logistics Excellence</p>
     <a class="btn" href="#contact" data-i18n="contact">Contact</a>
   </div>
 </section>
@@ -74,12 +55,9 @@
 <main class="container">
 
   <!-- === About Us === -->
-  <section class="section fade-in" id="about">
+  <section class="section" id="about">
     <h2 data-i18n="about">About Us</h2>
-    <p data-i18n="about_text">
-      We are a leading logistics company in Vietnam, offering global supply chain solutions that combine efficiency, reliability, and innovation.
-      Our team brings years of experience in freight forwarding, customs clearance, warehousing, and project cargo handling.
-    </p>
+    <p data-i18n="about_text">We are a leading logistics company in Vietnam, offering global supply chain solutions that combine efficiency, reliability, and innovation. Our team brings years of experience in freight forwarding, customs clearance, warehousing, and project cargo handling.</p>
     <div class="card-grid">
       <div class="card">
         <img src="assets/img/about1.jpg" alt="Our Team">
@@ -100,7 +78,7 @@
   </section>
 
   <!-- === Services === -->
-  <section class="section fade-in" id="services">
+  <section class="section" id="services">
     <h2 data-i18n="services">Our Services</h2>
     <div class="card-grid">
       <div class="card">
@@ -114,7 +92,7 @@
         <p data-i18n="svc2_text">Fast and reliable air freight solutions with global carriers and door-to-door delivery.</p>
       </div>
       <div class="card">
-        <img src="assets/img/customs.jpg" alt="Customs Brokerage">
+        <img src="assets/img/customs.jpg" alt="Customs">
         <h3 data-i18n="svc3_title">Customs Brokerage</h3>
         <p data-i18n="svc3_text">Professional customs clearance, documentation, and compliance support across all ports.</p>
       </div>
@@ -124,7 +102,7 @@
         <p data-i18n="svc4_text">Flexible warehouse space with value-added services such as labelling, packing, and cross-docking.</p>
       </div>
       <div class="card">
-        <img src="assets/img/trucking.jpg" alt="Domestic Transport">
+        <img src="assets/img/trucking.jpg" alt="Trucking">
         <h3 data-i18n="svc5_title">Domestic Transport</h3>
         <p data-i18n="svc5_text">Nationwide trucking service with GPS monitoring and efficient route planning.</p>
       </div>
@@ -137,12 +115,12 @@
   </section>
 
   <!-- === Offices === -->
-  <section class="section fade-in" id="offices">
+  <section class="section" id="offices">
     <h2 data-i18n="offices">Our Offices</h2>
     <p data-i18n="offices_text">We are headquartered in Ho Chi Minh City with offices and partners throughout Vietnam and Asia.</p>
     <div class="card-grid">
       <div class="card">
-        <img src="assets/img/hcm.jpg" alt="Ho Chi Minh City">
+        <img src="assets/img/hcm.jpg" alt="HCM Office">
         <h3 data-i18n="off1_title">Ho Chi Minh City (HQ)</h3>
         <p data-i18n="off1_text">Head office and main logistics hub for Southern Vietnam.</p>
       </div>
@@ -152,7 +130,7 @@
         <p data-i18n="off2_text">Handling northern operations, customs, and client services.</p>
       </div>
       <div class="card">
-        <img src="assets/img/haiphong.jpg" alt="Hai Phong Port">
+        <img src="assets/img/haiphong.jpg" alt="Hai Phong">
         <h3 data-i18n="off3_title">Hai Phong Port</h3>
         <p data-i18n="off3_text">Strategic location for sea freight and export-import services in the North.</p>
       </div>
@@ -160,12 +138,12 @@
   </section>
 
   <!-- === Contact === -->
-  <section class="section fade-in" id="contact">
+  <section class="section" id="contact">
     <h2 data-i18n="contact">Contact Us</h2>
     <div class="card-grid">
       <div class="card">
         <h3 data-i18n="ct1_title">General Enquiries</h3>
-        <p><strong>Email:</strong> hiring.slschcm@gmail.com<br><strong>Phone:</strong> +84 38 279 8634</p>
+        <p><strong>Email:</strong> <span data-i18n="email">hiring.slschcm@gmail.com</span><br><strong>Phone:</strong> <span data-i18n="phone">+84 38 279 8634</span></p>
       </div>
       <div class="card">
         <h3 data-i18n="ct2_title">Sales Department</h3>
@@ -180,7 +158,7 @@
   </section>
 </main>
 
-<footer class="footer fade-in">
+<footer class="footer">
   <div class="container">
     <p data-i18n="address">123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam</p>
     <p><span data-i18n="phone">+84 38 279 8634</span> | <span data-i18n="email">hiring.slschcm@gmail.com</span></p>
@@ -189,19 +167,73 @@
 </footer>
 
 <script>
-  // Thêm class "loaded" khi trang load xong
-  window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-  });
+/* Hiệu ứng load mượt */
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
 
-  // Kích hoạt fade-in khi cuộn
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.2 });
-  fadeEls.forEach(el => observer.observe(el));
+/* Ngôn ngữ song ngữ Anh - Trung (Phồn thể) */
+const translations = {
+  zh: {
+    home: "首頁",
+    about: "關於我們",
+    services: "服務項目",
+    offices: "辦事處",
+    contact: "聯絡我們",
+    company: "西貢供應鏈物流有限公司",
+    tagline: "以卓越的物流連接世界",
+    about_text: "我們是越南領先的物流公司，提供高效、可靠、創新的全球供應鏈解決方案。團隊擁有豐富的報關、倉儲與專案貨物處理經驗。",
+    about1_title: "專業團隊",
+    about1_text: "我們的員工以專業與細心提供快速且準確的物流解決方案。",
+    about2_title: "智慧科技",
+    about2_text: "採用現代資訊系統與貨物追蹤技術，確保即時可視化與高透明度。",
+    about3_title: "全球網絡",
+    about3_text: "在亞洲及全球的合作夥伴，確保貨物安全、高效地運輸。",
+    svc1_title: "海運服務",
+    svc1_text: "提供整櫃及拼櫃、專案貨與定期集運的進出口服務。",
+    svc2_title: "空運服務",
+    svc2_text: "與全球航空公司合作，快速可靠的空運門到門解決方案。",
+    svc3_title: "報關服務",
+    svc3_text: "專業處理清關、文件及各港口合規服務。",
+    svc4_title: "倉儲服務",
+    svc4_text: "提供靈活倉儲空間與增值服務，如貼標、包裝與轉運。",
+    svc5_title: "國內運輸",
+    svc5_text: "全國卡車運輸服務，GPS監控與高效路線規劃。",
+    svc6_title: "專案貨物",
+    svc6_text: "處理大型、超規及工業貨物，確保精確與安全。",
+    offices_text: "總部位於胡志明市，在越南及亞洲設有辦事處與合作夥伴。",
+    off1_title: "胡志明市（總部）",
+    off1_text: "越南南部主要的物流樞紐與營運中心。",
+    off2_title: "河內辦事處",
+    off2_text: "負責北部地區業務、報關與客戶支援。",
+    off3_title: "海防港",
+    off3_text: "北越重要的海運及進出口服務據點。",
+    ct1_title: "一般諮詢",
+    ct2_title: "業務部門",
+    ct3_title: "操作支援",
+    ct_note: "期待與您合作！",
+    address: "越南胡志明市第七郡阮文靈街123號",
+    copyright: "© 2025 西貢供應鏈物流有限公司 版權所有"
+  },
+  en: {}
+};
+
+/* Xử lý chuyển ngôn ngữ */
+function switchLang(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  localStorage.setItem("lang", lang);
+}
+
+/* Gán sự kiện nút bấm */
+document.getElementById("to-en").addEventListener("click", () => switchLang("en"));
+document.getElementById("to-zh").addEventListener("click", () => switchLang("zh"));
+
+/* Giữ ngôn ngữ đã chọn khi reload */
+const savedLang = localStorage.getItem("lang") || "en";
+switchLang(savedLang);
 </script>
 </body>
 </html>
