@@ -5,212 +5,177 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Home / 首頁 - Saigon Supply Chain</title>
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-/* Giữ phong cách hiện tại + thêm một chút sáng, hiện đại */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  color: #222;
-  background-color: #fafafa;
-  line-height: 1.6;
-}
-.header {
-  background: #f59e0b;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-}
-.brand img {
-  height: 48px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-.nav {
-  background: #fbbf24;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-  flex-wrap: wrap;
-}
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color .3s, transform .3s;
-}
-.nav a:hover {
-  color: #b45309;
-  transform: translateY(-2px);
-}
-.hero {
-  background: url('assets/img/hero.png') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-}
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
-.btn {
-  display: inline-block;
-  background: #f59e0b;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background .3s, transform .3s;
-}
-.btn:hover {
-  background: #b45309;
-  transform: scale(1.05);
-}
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-.section {
-  margin-bottom: 60px;
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 20px;
-}
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 20px;
-}
-.footer {
-  background: #f59e0b;
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-}
-@media(max-width:768px){
-  .header{flex-direction:column;text-align:center;}
-  .nav{gap:10px;}
-  .hero{padding:80px 15px;}
-}
-</style>
 </head>
 <body>
   <header class="header">
-    <div class="brand">
-      <img src="assets/img/logo.png" alt="logo">
-      <div><strong data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</strong></div>
-    </div>
-    <div class="lang">
-      <button id="to-en" class="lang-btn">🇬🇧</button>
-      <button id="to-zh" class="lang-btn">🇨🇳</button>
-    </div>
+    <div class="brand"><img src="assets/img/logo.png" alt="logo"><div><strong data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</strong></div></div>
+    <div class="lang"><button id="to-en" class="lang-btn">🇬🇧</button><button id="to-zh" class="lang-btn">🇨🇳</button></div>
   </header>
 
   <nav class="nav">
-    <a href="#home" data-i18n="home">Home</a>
-    <a href="#about" data-i18n="about">About Us</a>
-    <a href="#services" data-i18n="services">Services</a>
-    <a href="#offices" data-i18n="offices">Offices</a>
-    <a href="#contact" data-i18n="contact">Contact</a>
+    <a href="index.html" data-i18n="home">Home</a>
+    <a href="about.html" data-i18n="about">About Us</a>
+    <a href="services.html" data-i18n="services">Services</a>
+    <a href="network.html" data-i18n="offices">Offices</a>
+    <a href="contact.html" data-i18n="contact">Contact</a>
   </nav>
 
-  <section class="hero" id="home">
+  <section class="hero">
     <div class="container">
-      <h1>Saigon Supply Chain Logistics Co., Ltd.</h1>
-      <p style="font-size:20px;margin-top:12px">Connecting the World Through Logistics Excellence</p>
-      <a class="btn" href="#contact">Contact</a>
+      <h1 data-i18n="company">Saigon Supply Chain Logistics Co., Ltd.</h1>
+      <p style="font-size:20px;margin-top:12px" data-i18n="tagline">Connecting the World Through Logistics Excellence</p>
+      <a class="btn" href="contact.html" data-i18n="contact">Contact</a>
     </div>
   </section>
 
   <main class="container">
-    <!-- About Us -->
+    <!-- Existing homepage intro -->
+    <section class="section" id="home-intro">
+      <h2>Home / 首頁</h2>
+      <p>這是一個示範頁面，內容可依需要替換。</p>
+      <div class="card-grid">
+        <div class="card"><h3>要點 A</h3><p>說明要點 A 的內容。</p></div>
+        <div class="card"><h3>要點 B</h3><p>說明要點 B 的內容。</p></div>
+        <div class="card"><h3>要點 C</h3><p>說明要點 C 的內容。</p></div>
+      </div>
+    </section>
+
+    <!-- === About Us (bổ sung) === -->
     <section class="section" id="about">
       <h2>About Us</h2>
       <p>
-        Founded with a strong vision to become a trusted global logistics partner,
-        <strong>Saigon Supply Chain Logistics Co., Ltd.</strong> provides reliable, end-to-end
-        logistics solutions across <strong>sea, air, and land</strong>.
-        With a dedicated team and deep local expertise in Vietnam, we deliver
-        customized freight forwarding, warehousing, and distribution services
-        that meet international standards.
+        <strong>Saigon Supply Chain Logistics Co., Ltd.</strong> was established with a clear mission:
+        to provide reliable, end-to-end logistics solutions that connect Vietnam with the global market.
+        We combine local expertise, a professional operations team, and strategic international partners
+        to deliver freight forwarding, customs clearance, warehousing and distribution services that meet
+        modern supply-chain requirements.
       </p>
       <p>
-        We are inspired by the belief that logistics is more than moving goods —
-        it’s about connecting people, businesses, and opportunities worldwide.
+        Our core values: <em>Integrity, Reliability, Customer Focus</em>. We continuously invest in
+        people and systems so our customers enjoy transparent tracking, timely delivery and competitive rates.
       </p>
+      <ul>
+        <li>Experienced freight management across sea, air and road</li>
+        <li>Customs & compliance support to minimize delays</li>
+        <li>Flexible warehousing and value-added services</li>
+      </ul>
     </section>
 
-    <!-- Services -->
+    <!-- === Services (bổ sung) === -->
     <section class="section" id="services">
       <h2>Our Services</h2>
+
       <div class="card-grid">
         <div class="card">
           <h3>Sea Freight</h3>
-          <p>Full-container (FCL) and less-than-container (LCL) shipments,
-            break-bulk and project cargo handling with trusted global partners.</p>
+          <p>Full Container Load (FCL), Less than Container Load (LCL), break-bulk and project cargo handling.
+             We partner with major carriers to provide reliable schedules and competitive rates.</p>
         </div>
+
         <div class="card">
           <h3>Air Freight</h3>
-          <p>Flexible and reliable air freight solutions — express, economy and charter options
-            with worldwide coverage.</p>
+          <p>Priority and economy air solutions, including charter options and door-to-door express services
+             for urgent shipments.</p>
         </div>
+
         <div class="card">
-          <h3>Road & Inland Transport</h3>
-          <p>Comprehensive domestic trucking and cross-border transport throughout
-            Southeast Asia, ensuring smooth and secure delivery.</p>
+          <h3>Customs Brokerage & Compliance</h3>
+          <p>Experienced customs brokerage team to handle documentation, classification and regulatory requirements,
+             ensuring faster clearance and reduced compliance risk.</p>
         </div>
+
         <div class="card">
           <h3>Warehousing & Distribution</h3>
-          <p>Modern warehousing, value-added services such as packaging,
-            labelling and inventory management with real-time tracking.</p>
+          <p>Secure storage, inventory management, pick-and-pack, labelling and cross-docking with flexible
+             short-term and long-term solutions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Supply Chain Solutions</h3>
+          <p>End-to-end supply chain planning, procurement support, last-mile delivery and tailor-made logistics
+             programs to fit different industries.</p>
+        </div>
+
+        <div class="card">
+          <h3>Project & Specialized Cargo</h3>
+          <p>Handling oversized, heavy-lift and complex project shipments with coordinated planning, equipment
+             and on-site support.</p>
         </div>
       </div>
     </section>
 
-    <!-- Offices -->
+    <!-- === Offices / Network (bổ sung) === -->
     <section class="section" id="offices">
-      <h2>Our Network</h2>
+      <h2>Our Offices & Network</h2>
       <p>
-        Headquartered in <strong>Ho Chi Minh City, Vietnam</strong>, we operate through
-        a strong network of branches and partners across <strong>Asia, Europe and North America</strong>.
-        This extensive coverage allows us to offer door-to-door logistics
-        solutions connecting Vietnam to major global trade hubs.
+        Headquartered in <strong>Ho Chi Minh City, Vietnam</strong>, Saigon Supply Chain operates through
+        a network of branch offices and trusted partners across Asia and around the world. This network
+        enables smooth door-to-door services and local on-ground support at origin and destination.
       </p>
-      <ul>
-        <li>Vietnam: Ho Chi Minh City (HQ), Hai Phong, Da Nang</li>
-        <li>Regional partners: Thailand, Singapore, China, Korea, Japan</li>
-        <li>Global partners: USA, Australia, Germany, Netherlands</li>
-      </ul>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Ho Chi Minh City (HQ)</h3>
+          <p>Corporate headquarters and main operations hub. Address: 123 Nguyen Van Linh, District 7.</p>
+        </div>
+        <div class="card">
+          <h3>Hanoi</h3>
+          <p>Northern Vietnam office handling inbound/outbound operations and customs for the North.</p>
+        </div>
+        <div class="card">
+          <h3>Hai Phong</h3>
+          <p>Port-side presence to support sea freight and export operations in the North.</p>
+        </div>
+        <div class="card">
+          <h3>Regional Partners</h3>
+          <p>Strong partner network in Thailand, Singapore, China, Korea and Japan to provide regional coverage.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:18px;">
+        If you need local assistance in another country, please contact us and we will connect you with our
+        nearest partner or agent.
+      </p>
     </section>
 
-    <!-- Contact -->
+    <!-- === Contact (bổ sung) === -->
     <section class="section" id="contact">
       <h2>Contact Us</h2>
-      <p>For any inquiries, please reach out to us:</p>
-      <p><strong>Address:</strong> 123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam</p>
-      <p><strong>Phone:</strong> +84 28 1234 5678</p>
-      <p><strong>Email:</strong> info@saigonsupplychain.com</p>
-      <p>Our customer service team is available 24/7 to support your logistics needs.</p>
-      <a class="btn" href="mailto:info@saigonsupplychain.com">Send Email</a>
+      <p>For enquiries, quotations or partnership opportunities, please contact our team:</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>General Enquiries</h3>
+          <p><strong>Email:</strong> info@saigonsupplychain.com<br><strong>Phone:</strong> +84 28 1234 5678</p>
+        </div>
+
+        <div class="card">
+          <h3>Sales & Quotations</h3>
+          <p><strong>Email:</strong> sales@saigonsupplychain.com<br><strong>Phone:</strong> +84 28 8765 4321</p>
+        </div>
+
+        <div class="card">
+          <h3>Operations Support</h3>
+          <p><strong>Email:</strong> ops@saigonsupplychain.com<br><strong>Phone:</strong> +84 28 9988 7766</p>
+        </div>
+      </div>
+
+      <p style="margin-top:18px;">
+        Or send us a message directly via email. We aim to respond to all enquiries within one business day.
+      </p>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2025 Saigon Supply Chain Logistics Co., Ltd. All Rights Reserved.</p>
+      <p data-i18n="address">123 Nguyen Van Linh, District 7, Ho Chi Minh City, Vietnam</p>
+      <p data-i18n="phone">+84 28 1234 5678</p>
+      <p data-i18n="email">info@saigonsupplychain.com</p>
+      <p style="margin-top:12px" data-i18n="copyright">© 2025 Saigon Supply Chain Logistics Co., Ltd. All Rights Reserved.</p>
     </div>
   </footer>
+
+<script src="assets/js/lang-switch.js"></script>
 </body>
 </html>
